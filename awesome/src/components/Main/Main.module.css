@@ -1,0 +1,8 @@
+.mainContent {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #096178;
+  color: #fff;
+}

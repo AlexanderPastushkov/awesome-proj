@@ -1,0 +1,19 @@
+.active {
+  color: rgb(57, 201, 187);
+}
+.item {
+  color: #fff;
+  transition: all 0.3s ease 0s;
+  gap: 15px;
+}
+.item:hover {
+  color: rgb(239, 151, 151);
+}
+.nav {
+  gap: 15px;
+  display: flex;
+  padding: 10px;
+}
+.navbar {
+  margin-top: 20px;
+}
