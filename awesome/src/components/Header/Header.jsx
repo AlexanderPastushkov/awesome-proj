@@ -2,7 +2,7 @@ import s from "./Header.module.css";
 import Links from "./Links/Links";
 import Logo from "./Logo/Logo";
 
-const Header = (props) => {
+const Header = () => {
   return (
     <div className={s.wrapper}>
       <Logo />

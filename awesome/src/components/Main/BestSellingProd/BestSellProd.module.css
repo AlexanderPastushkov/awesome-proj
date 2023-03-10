@@ -1,0 +1,18 @@
+.usersItems div {
+  background-color: #45c7ee;
+  gap: 5px;
+  border: 1px solid #333;
+  padding: 10px;
+}
+.img {
+  border: 1px solid #333;
+}
+.title {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 15px;
+}
+span {
+  color: #0b1786;
+}

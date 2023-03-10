@@ -4,7 +4,6 @@ import {
   addChairCreator,
   updateChairCreator,
 } from "../../../redux/InteriorReducer";
-import s from "./Interior.module.css";
 
 let mapStateToProps = (state) => {
   return {
