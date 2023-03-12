@@ -6,18 +6,23 @@ const Links = (props) => {
   return (
     <nav className={s.nav}>
       <div>
-        <NavLink to="/interior" className={activeLink}>
-          Interior
+        <NavLink to="/results" className={activeLink}>
+          Results
         </NavLink>
       </div>
       <div>
-        <NavLink to="/bestsell" className={activeLink}>
-          Sellings
+        <NavLink to="/teams" className={activeLink}>
+          Teams
         </NavLink>
       </div>
       <div>
         <NavLink to="/news" className={activeLink}>
           News
+        </NavLink>
+      </div>
+      <div>
+        <NavLink to="/newspapers" className={activeLink}>
+          Newspapers
         </NavLink>
       </div>
     </nav>

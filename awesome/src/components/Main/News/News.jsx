@@ -1,13 +1,24 @@
 import s from "./News.module.css";
-import NewsContent from "./NewsContent/NewsContent";
 
 const News = (props) => {
-  let newsElements = props.news.map((n) => (
-    <NewsContent message={n.message} likeCount={n.likeCount} />
-  ));
+  console.log(props);
   return (
     <div className={s.newsContainer}>
-      <div className={s.newsElements}>{newsElements}</div>
+      <h2>News</h2>
+      <div className={s.news}>
+        {props.news.map((n) => (
+          <div>
+            <div className={s.newsItems} key={n.id}>
+              <div>
+                <img src={n.Image} alt="photo" className={s.img} />
+              </div>
+              <div>{n.Title}</div>
+
+              <div>{n.PublisherDate}</div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

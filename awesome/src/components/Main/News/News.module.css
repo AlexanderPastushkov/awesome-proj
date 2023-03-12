@@ -6,3 +6,21 @@
 
   color: #fff;
 }
+.img {
+  max-width: 200px;
+}
+.newsItems {
+  padding: 10px;
+  border: 1px solid #333;
+}
+.news {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+.newsContainer {
+  padding: 15px;
+}
+h2 {
+  margin-bottom: 10px;
+}

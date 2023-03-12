@@ -16,3 +16,9 @@
 span {
   color: #0b1786;
 }
+h2 {
+  margin: 10px 0;
+}
+.score {
+  gap: 10px;
+}

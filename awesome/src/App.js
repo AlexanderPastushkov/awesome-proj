@@ -8,9 +8,13 @@ const App = (props) => {
   return (
     <div className="wrapper">
       <div className="container">
-        <Header />
-        <Main />
-        <Footer />
+        <div className="main">
+          <Header />
+          <Main />
+        </div>
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
     </div>
   );

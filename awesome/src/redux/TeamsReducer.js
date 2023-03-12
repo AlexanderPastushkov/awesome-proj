@@ -4,7 +4,7 @@ let initialState = {
   teams: [],
 };
 
-const bestSellReducer = (state = initialState, action) => {
+const teamsReducer = (state = initialState, action) => {
   switch (action.type) {
     case SHOW_TEAM:
       return {
@@ -23,4 +23,4 @@ export const setTeamsAC = (teams) => {
   };
 };
 
-export default bestSellReducer;
+export default teamsReducer;
