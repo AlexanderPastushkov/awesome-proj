@@ -11,6 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
+    {/* создаем контекст где <Provider/>- это родительский компонент, а внутри его дети(consumers) могут получить доступ к store без прокидывания по всей ветке */}
     <Provider store={store}>
       <React.StrictMode>
         <App />

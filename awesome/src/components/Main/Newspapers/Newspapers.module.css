@@ -15,7 +15,7 @@
 }
 .usersItems {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding: 15px;
   justify-items: center;
   text-align: center;
@@ -24,6 +24,14 @@
 .userInfo {
   display: block;
   padding: 15px;
+  border: 1px solid #333;
+  background-color: #2daac6;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+  font-size: 14px;
+}
+.userInfo:hover {
+  background-color: #38bfdd;
 }
 .follow {
   margin-bottom: 10px;

@@ -1,25 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
-import { showTransfersAC } from "../../../redux/TransferReducer";
-import axios from "axios";
+import {
+  showTransfers,
+  toggleIsFetching,
+} from "../../../redux/TransferReducer";
+
 import Transfers from "./Transfers";
+import { footballAPI } from "../../../api/api";
 
 class TransfersContainer extends React.Component {
   componentDidMount() {
-    const options = {
-      method: "GET",
-      url: "https://football98.p.rapidapi.com/premierleague/results",
-      headers: {
-        "X-RapidAPI-Key": "c33e1b5d32msh4327cb83699b9c1p1c70dfjsn0cac546c9ef9",
-        "X-RapidAPI-Host": "football98.p.rapidapi.com",
-      },
-    };
-
-    axios
-      .request(options)
-      .then((response) => {
-        console.log(response.data);
-        this.props.showTransfers(response.data);
+    this.props.toggleIsFetching(true);
+    footballAPI
+      .getTeams("results")
+      .then((data) => {
+        this.props.toggleIsFetching(false);
+        console.log(data);
+        this.props.showTransfers(data[0][" Matchday 27 "]);
       })
       .catch(function (error) {
         console.error(error);
@@ -35,11 +32,8 @@ let mapStateToProps = (state) => {
     transfers: state.transfersPage.transfers,
   };
 };
-let mapDispatchToProps = (dispatch) => {
-  return {
-    showTransfers: (transfers) => {
-      dispatch(showTransfersAC(transfers));
-    },
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(TransfersContainer);
+
+export default connect(mapStateToProps, {
+  showTransfers,
+  toggleIsFetching: toggleIsFetching,
+})(TransfersContainer);

@@ -1,9 +1,13 @@
 import { NavLink } from "react-router-dom";
+import Preloader from "../../Common/Preloader/Preloader";
 import s from "./Transfers.module.css";
 
 const Transfers = (props) => {
   console.log(props);
-  let tranferArr = props.transfers[0][" Matchday 27 "];
+  if (props.transfers.length == 0) {
+    return <Preloader />;
+  }
+  let tranferArr = props.transfers;
   console.log(tranferArr);
   return (
     <div>
@@ -13,7 +17,7 @@ const Transfers = (props) => {
           <NavLink to="/best">
             <div className={s.usersItems} key={u.id}>
               <div>
-                <span>home Team :</span> {u.homeTeam}
+                <span className={s.blueColor}>home Team :</span> {u.homeTeam}
               </div>
               <div className={s.score}>
                 <div>
@@ -24,7 +28,7 @@ const Transfers = (props) => {
             </div>
             <div className={s.usersItems} key={u.id}>
               <div>
-                <span>away Team :</span> {u.awayTeam}
+                <span className={s.blueColor}>away Team :</span> {u.awayTeam}
               </div>
               <div className={s.score}>
                 <div>

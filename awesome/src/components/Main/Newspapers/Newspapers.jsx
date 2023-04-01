@@ -17,12 +17,14 @@ const Newspapers = (props) => {
     <div className={s.newspapers}>
       <div className={s.usersItems}>
         {props.newspapers.map((u) => (
-          <div key={u.id}>
+          <div className={s.userInfo} key={u.id}>
             <div>
               <NavLink to={u.url.slice(0, -5)}>
-                <div className={s.userInfo}>
+                <div>
                   <div>start year {u.start_year}</div>
-                  <div>publisher {!u.publisher ? "Hello" : u.publisher}</div>
+                  {/* <div>publisher {!u.publisher ? "Hello" : u.publisher}</div> */}
+                  <div>end year {u.end_year}</div>
+                  <div>country: {u.country} </div>
                 </div>
               </NavLink>
               {/* <div className={s.userLocation}>
@@ -34,20 +36,17 @@ const Newspapers = (props) => {
         ))}
       </div>
       <div className={s.pagination}>
-        {pages.map((p) => {
-          return (
-            <div
-              className={
-                props.currentPage === p ? s.selectedPage : s.nonSelected
-              }
-              onClick={(e) => {
-                props.onPageChanged(p);
-              }}
-            >
-              {p}
-            </div>
-          );
-        })}
+        {pages.map((p) => (
+          <div
+            key={p}
+            className={props.currentPage === p ? s.selectedPage : s.nonSelected}
+            onClick={(e) => {
+              props.onPageChanged(p);
+            }}
+          >
+            {p}
+          </div>
+        ))}
       </div>
     </div>
   );
