@@ -1,13 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-
 import s from "./Main.module.css";
 import NewsContainer from "./News/NewsContainer";
 import NewspapersContainer from "./Newspapers/NewspapersContainer";
 import PracticeContainer from "./Practice/PracticeContainer";
 import TeamsContainer from "./Teams/TeamsContainer";
-
 import TransfersContainer from "./Transfers/TransfersContainer";
 import TryToShowBestSell from "./TryToShowBestSell/TryToShowBestSell";
+import React from "react";
 
 const Main = () => {
   return (

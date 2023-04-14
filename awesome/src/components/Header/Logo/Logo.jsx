@@ -1,4 +1,4 @@
-import logo from "./logoAwesome.svg";
+import logo from "../../../Assets/Images/ball_logo.png";
 import s from "./Logo.module.css";
 const Logo = () => {
   return (

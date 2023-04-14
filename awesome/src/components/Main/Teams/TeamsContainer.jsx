@@ -10,11 +10,11 @@ class TeamsContainer extends React.Component {
   componentDidMount() {
     this.props.toggleIsFetching(true);
     footballAPI
-      .getTeams("fixtures")
+      .getTeams("premierleague/fixtures")
       .then((data) => {
         this.props.toggleIsFetching(false);
         console.log(data);
-        this.props.setTeams(data[0][" Matchday 29 "]);
+        this.props.setTeams(data[0][" Matchday 32 "]);
       })
       .catch(function (error) {
         console.error(error);

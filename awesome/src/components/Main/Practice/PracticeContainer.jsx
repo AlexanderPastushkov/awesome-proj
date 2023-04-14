@@ -1,25 +1,37 @@
 import React from "react";
 import { connect } from "react-redux";
-import { anotherFootballAPI, footballAPI } from "../../../api/api";
-import { addComment, updateCommentText } from "../../../redux/PracticeReducer";
+import { footballAPI } from "../../../api/api";
+import {
+  addComment,
+  decrement,
+  getTable,
+  increment,
+  reset,
+  showTable,
+  toggleIsFetching,
+  updateCommentText,
+} from "../../../redux/PracticeReducer";
+import Preloader from "../../Common/Preloader/Preloader";
 import Practice from "./Practice";
 
 class PracticeContainer extends React.Component {
   render() {
     console.log("RENDERED");
     return (
-      <Practice
-        practicePage={this.props.practicePage}
-        addComment={this.props.addComment}
-        updateCommentText={this.props.updateCommentText}
-      />
+      <>
+        {this.props.isFetching ? <Preloader /> : null}
+        <Practice
+          practicePage={this.props.practicePage}
+          increment={this.props.increment}
+          decrement={this.props.decrement}
+          reset={this.props.reset}
+        />
+      </>
     );
   }
   componentDidMount() {
-    footballAPI.getTeams("results").then((data) => {
-      console.log(data);
-      // this.props.toggleIsFetching(false);
-    });
+    console.log("I know i am inside the DOM");
+    this.props.getTable();
   }
 }
 
@@ -29,6 +41,8 @@ let mapStateToProps = (state) => {
   };
 };
 export default connect(mapStateToProps, {
-  addComment: addComment,
-  updateCommentText: updateCommentText,
+  getTable: getTable,
+  increment: increment,
+  decrement: decrement,
+  reset: reset,
 })(PracticeContainer);

@@ -21,3 +21,34 @@
   background-color: rgb(24, 224, 228);
   padding: 10px;
 }
+.table {
+  gap: 10px;
+  border: #fff solid 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 30px;
+  text-align: center;
+}
+.tableData {
+  display: grid;
+  grid-template-columns: auto;
+  border: #fff solid 1px;
+}
+.position {
+  margin-left: 10px;
+}
+.name {
+  background-color: #051c2a;
+  padding: 5px;
+}
+.points {
+  margin-right: 10px;
+}
+.counter {
+}
+.btn {
+  margin: 15px;
+}

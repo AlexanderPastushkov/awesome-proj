@@ -12,7 +12,7 @@ class TransfersContainer extends React.Component {
   componentDidMount() {
     this.props.toggleIsFetching(true);
     footballAPI
-      .getTeams("results")
+      .getTeams("premierleague/results")
       .then((data) => {
         this.props.toggleIsFetching(false);
         console.log(data);

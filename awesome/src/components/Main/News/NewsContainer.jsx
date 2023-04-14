@@ -1,29 +1,17 @@
 import axios from "axios";
 import { connect } from "react-redux";
-import { showNews, showNewsAC } from "../../../redux/NewsReducer";
+import {
+  showFootballNews,
+  showNews,
+  showNewsAC,
+} from "../../../redux/NewsReducer";
 import News from "./News";
 import React from "react";
+import { footballAPI } from "../../../api/api";
 
 class NewsContainer extends React.Component {
   componentDidMount() {
-    const options = {
-      method: "GET",
-      url: "https://football98.p.rapidapi.com/premierleague/news",
-      headers: {
-        "X-RapidAPI-Key": "c33e1b5d32msh4327cb83699b9c1p1c70dfjsn0cac546c9ef9",
-        "X-RapidAPI-Host": "football98.p.rapidapi.com",
-      },
-    };
-
-    axios
-      .request(options)
-      .then((response) => {
-        this.props.showNews(response.data);
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    this.props.showFootballNews();
   }
   render() {
     return <News news={this.props.news} />;
@@ -36,4 +24,6 @@ let mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { showNews })(NewsContainer); //we connect our data to store and make container component
+export default connect(mapStateToProps, { showFootballNews: showFootballNews })(
+  NewsContainer
+); //we connect our data to store and make container component

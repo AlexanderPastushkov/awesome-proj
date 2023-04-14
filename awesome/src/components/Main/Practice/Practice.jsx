@@ -1,42 +1,37 @@
 import s from "./Practice.module.css";
 
 const Practice = (props) => {
-  let state = props.practicePage; //здесь пришел наш объект с двумя массивами, которые наде преобразовать "мапить"
-  let usersData = state.usersData.map((u) => (
-    <div key={u.id}>
-      {" "}
-      <div>{u.name}</div>
-      <div>{u.birthplace}</div>
+  let table = props.practicePage.table;
+  console.log(table);
+
+  let tableData = table.map((t) => (
+    <div className={s.table}>
+      <div className={s.position}>{t.Position}</div>
+      <div>
+        <img src={t.SquadLogo} alt="photo" className={s.logo} />
+      </div>
+      <div className={s.name}>{t.Name}</div>
+      <div>Plays:{t.Played}</div>
+      <div>Wins: {t.Winned}</div>
+      <div>Lose: {t.Loosed}</div>
+      <div className={s.points}>Points: {t.Points}</div>
     </div>
   ));
-  let commentsData = state.usersComments.map((c) => (
-    <div key={c.id}>{c.text}</div>
-  ));
 
-  const addComment = () => {
-    props.addComment();
-  };
-
-  const updateCommentText = (e) => {
-    let body = e.target.value;
-    props.updateCommentText(body);
-  };
   return (
     <div>
-      <div className={s.dialogs}>
-        <span> {usersData} </span>
-        <span>{commentsData}</span>
-      </div>
-      <div>
-        <textarea
-          placeholder="Enter your comment"
-          onChange={updateCommentText} //updating state (bll) FLUX
-          value={state.newCommentText} //тут значение сначала по-умолчанию,которое в initialState,далее зачищается
-        ></textarea>
-      </div>
-      <div>
-        <button onClick={addComment} className={s.btn}>
-          Send
+      <div className={s.tableData}>{tableData}</div>
+
+      <div className={s.counter}>
+        <button className={s.btn} onClick={props.decrement}>
+          -
+        </button>
+        <span>{props.practicePage.count}</span>
+        <button className={s.btn} onClick={props.increment}>
+          +
+        </button>
+        <button className={s.btn} onClick={props.reset}>
+          Reset
         </button>
       </div>
     </div>

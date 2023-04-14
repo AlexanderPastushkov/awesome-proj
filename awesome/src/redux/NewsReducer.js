@@ -1,3 +1,5 @@
+import { footballAPI } from "../api/api";
+
 const SHOW_NEWS = "SHOW-NEWS";
 const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING";
 let initialState = {
@@ -15,7 +17,8 @@ const newsReducer = (state = initialState, action) => {
       return state;
   }
 };
-
+//========================================================================================================================================================
+//action creators
 export const showNews = (news) => {
   return {
     type: SHOW_NEWS,
@@ -26,6 +29,21 @@ export const toggleIsFetching = (isFetching) => {
   return {
     type: TOGGLE_IS_FETCHING,
     isFetchin: isFetching,
+  };
+};
+//========================================================================================================================================================
+//thunk creator
+
+export const showFootballNews = () => {
+  return (dispatch) => {
+    footballAPI
+      .getTeams("premierleague/news")
+      .then((data) => {
+        dispatch(showNews(data));
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
   };
 };
 
