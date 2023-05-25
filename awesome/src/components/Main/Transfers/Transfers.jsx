@@ -4,9 +4,9 @@ import s from "./Transfers.module.css";
 
 const Transfers = (props) => {
   console.log(props);
-  if (props.transfers.length == 0) {
-    return <Preloader />;
-  }
+  // if (props.transfers.length == 0) {
+  //   return <Preloader />;
+  // }
   let tranferArr = props.transfers;
   console.log(tranferArr);
   return (

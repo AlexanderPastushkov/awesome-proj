@@ -30,6 +30,17 @@ const Links = (props) => {
           Newspapers
         </NavLink>
       </div>
+
+      <div>
+        <NavLink to="/users" className={activeLink}>
+          Users
+        </NavLink>
+      </div>
+      <div>
+        <NavLink to="/posts" className={activeLink}>
+          Posts
+        </NavLink>
+      </div>
     </nav>
   );
 };

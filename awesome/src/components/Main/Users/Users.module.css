@@ -1,0 +1,15 @@
+.userItems {
+  border: 1px solid #333;
+  padding: 10px;
+  transition: all 0.3s ease 0s;
+}
+.users {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.userItems:hover {
+  background-color: #fd9393;
+}
+.btn {
+  margin: 15px;
+}

@@ -5,6 +5,8 @@ import practiceReducer from "./PracticeReducer";
 import teamsReducer from "./TeamsReducer";
 import transfersReducer from "./TransferReducer";
 import thunkMiddleware from "redux-thunk";
+import usersReducer from "./UsersReducer";
+import postsReducer from "./PostsReducer";
 
 let reducers = combineReducers({
   newsPage: newsReducer,
@@ -12,6 +14,8 @@ let reducers = combineReducers({
   teamsPage: teamsReducer,
   newspapersPage: newspapersReducer,
   practicePage: practiceReducer,
+  usersPage: usersReducer,
+  // postsPage: postsReducer,
 });
 let store = legacy_createStore(reducers, applyMiddleware(thunkMiddleware));
 window.store = store;

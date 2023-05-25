@@ -1,6 +1,10 @@
 import axios from "axios";
 import React from "react";
 
+const instancePlaceHolder = axios.create({
+  baseURL: "https://jsonplaceholder.typicode.com/",
+});
+
 const instanceFootball = axios.create({
   baseURL: "https://football98.p.rapidapi.com/",
   withCredentials: true,
@@ -32,5 +36,16 @@ export const newspapersAPI = {
         `search/titles/results/?terms=${place}&format=json&page=${currentPage}`
       )
       .then((response) => response.data);
+  },
+};
+
+export const jsonPlaceHolderAPI = {
+  getPosts(id) {
+    return instancePlaceHolder
+      .get(`posts/${id}`)
+      .then((response) => response.data);
+  },
+  getUsers() {
+    return instancePlaceHolder.get("users").then((response) => response.data);
   },
 };

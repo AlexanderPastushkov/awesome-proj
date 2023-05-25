@@ -7,6 +7,9 @@ import TeamsContainer from "./Teams/TeamsContainer";
 import TransfersContainer from "./Transfers/TransfersContainer";
 import TryToShowBestSell from "./TryToShowBestSell/TryToShowBestSell";
 import React from "react";
+import PostsContainer from "./Posts/PostsContainer";
+import UsersContainer from "./Users/UsersContainer";
+import { Example } from "./renderProp/dataProvider/Example1";
 
 const Main = () => {
   return (
@@ -18,6 +21,8 @@ const Main = () => {
         <Route path="/best" element={<TryToShowBestSell />} />
         <Route path="/newspapers" element={<NewspapersContainer />} />
         <Route path="/practice" element={<PracticeContainer />} />
+        <Route path="/users" element={<UsersContainer />} />
+        <Route path="/posts" element={<Example />} />
       </Routes>
     </div>
   );

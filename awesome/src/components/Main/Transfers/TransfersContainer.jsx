@@ -16,7 +16,7 @@ class TransfersContainer extends React.Component {
       .then((data) => {
         this.props.toggleIsFetching(false);
         console.log(data);
-        this.props.showTransfers(data[0][" Matchday 27 "]);
+        this.props.showTransfers(data[0][" Matchday 34 "]);
       })
       .catch(function (error) {
         console.error(error);
