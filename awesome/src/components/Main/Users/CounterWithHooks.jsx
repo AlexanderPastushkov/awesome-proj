@@ -16,7 +16,7 @@ const CounterWithHooks = () => {
   return (
     <div>
       <div className={s.counter}>
-        <button className={s.btn} onClick={decrement}>
+        <button className={s.btn} onClick={() => setCount(count - 1)}>
           -
         </button>
         <span>{count}</span>

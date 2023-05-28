@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "randomcolor": "^0.6.2",
     "react-bootstrap": "^2.7.4"
   }
 }

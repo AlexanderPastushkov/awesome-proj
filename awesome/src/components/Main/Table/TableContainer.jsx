@@ -2,15 +2,15 @@ import React from "react";
 import { connect } from "react-redux";
 import { getTable } from "../../../redux/PracticeReducer";
 import Preloader from "../../Common/Preloader/Preloader";
-import Practice from "./Practice";
+import Table from "./Table";
 
-class PracticeContainer extends React.Component {
+class TableContainer extends React.Component {
   render() {
     console.log("RENDERED");
     return (
       <>
         {this.props.isFetching ? <Preloader /> : null}
-        <Practice practicePage={this.props.practicePage} />
+        <Table practicePage={this.props.practicePage} />
       </>
     );
   }
@@ -27,4 +27,4 @@ let mapStateToProps = (state) => {
 };
 export default connect(mapStateToProps, {
   getTable: getTable, //thunk
-})(PracticeContainer);
+})(TableContainer);

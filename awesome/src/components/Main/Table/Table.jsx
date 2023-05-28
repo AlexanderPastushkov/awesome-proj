@@ -1,6 +1,6 @@
-import s from "./Practice.module.css";
+import s from "./Table.module.css";
 
-const Practice = (props) => {
+const Table = (props) => {
   let table = props.practicePage.table;
   console.log(table);
 
@@ -24,4 +24,4 @@ const Practice = (props) => {
     </div>
   );
 };
-export default Practice;
+export default Table;

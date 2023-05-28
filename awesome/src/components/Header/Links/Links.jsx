@@ -21,7 +21,7 @@ const Links = (props) => {
         </NavLink>
       </div>
       <div>
-        <NavLink to="/practice" className={activeLink}>
+        <NavLink to="/table" className={activeLink}>
           Table
         </NavLink>
       </div>
@@ -39,6 +39,11 @@ const Links = (props) => {
       <div>
         <NavLink to="/posts" className={activeLink}>
           Posts
+        </NavLink>
+      </div>
+      <div>
+        <NavLink to="/practice" className={activeLink}>
+          Practice
         </NavLink>
       </div>
     </nav>

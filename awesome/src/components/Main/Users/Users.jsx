@@ -2,7 +2,6 @@ import { NavLink } from "react-router-dom";
 import s from "./Users.module.css";
 
 const Users = (props) => {
-  console.log(props);
   return (
     <div className={s.users}>
       {props.users.map((u) => (
