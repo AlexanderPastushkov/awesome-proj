@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import s from "./Main.module.css";
 import NewsContainer from "./News/NewsContainer";
 import NewspapersContainer from "./Newspapers/NewspapersContainer";
-import UnitedComps from "./Practice/FontIncrease/UnitedComps";
+import UnitedComps from "./Practice/UnitedComps/UnitedComps";
 import { ExampleWithChildren } from "./renderProp/dataProvider/Example2";
 import TableContainer from "./Table/TableContainer";
 import TeamsContainer from "./Teams/TeamsContainer";
