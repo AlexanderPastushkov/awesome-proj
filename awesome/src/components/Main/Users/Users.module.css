@@ -6,10 +6,10 @@
 .users {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding: 15px;
+  justify-items: center;
 }
-.userItems:hover {
-  background-color: #fd9393;
-}
+
 .btn {
   margin: 15px;
 }

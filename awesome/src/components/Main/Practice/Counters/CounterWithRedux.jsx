@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import s from "./Users.module.css";
+import React from "react";
+import s from "./Counter.module.css";
 
 const CounterWithRedux = (props) => {
   return (

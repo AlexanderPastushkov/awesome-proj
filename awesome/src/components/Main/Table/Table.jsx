@@ -4,8 +4,8 @@ const Table = (props) => {
   let table = props.practicePage.table;
   console.log(table);
 
-  let tableData = table.map((t) => (
-    <div className={s.table}>
+  let tableData = table.map((t, index) => (
+    <div className={s.table} key={index}>
       <div className={s.position}>{t.Position}</div>
       <div>
         <img src={t.SquadLogo} alt="photo" className={s.logo} />

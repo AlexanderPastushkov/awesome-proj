@@ -1,0 +1,14 @@
+.formInput {
+  margin-right: 7px;
+  padding: 5px;
+}
+.btn {
+  margin-right: 10px;
+  background-color: #60b8f3;
+  transition: all 0.3s ease 0s;
+  padding: 10px;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-color: #1476b8;
+}

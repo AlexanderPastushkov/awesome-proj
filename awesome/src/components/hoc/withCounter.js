@@ -2,7 +2,7 @@ import randomColor from "randomcolor";
 import React, { useState } from "react";
 
 const UpdatedComponent = (OriginalComponent, increaseCount, name) => {
-  return function NewComponent(props) {
+  const NewComponent = (props) => {
     const [counter, setCounter] = useState(10);
     const [color, setColor] = useState(randomColor());
     return (
@@ -19,5 +19,6 @@ const UpdatedComponent = (OriginalComponent, increaseCount, name) => {
       />
     );
   };
+  return NewComponent;
 };
 export default UpdatedComponent; //example of sharing state and props in HOCs

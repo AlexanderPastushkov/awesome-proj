@@ -1,13 +1,16 @@
 import { createContext, useContext } from "react";
 
 const MyContext = createContext("without provider"); //Чтобы использовать контекст, мы создаём объект MyContext, вызывая метод createContext.
-console.log(MyContext);
+// console.log(MyContext);
 
 const External = () => {
   return (
-    <MyContext.Provider value="Hello , I am External">
-      <Intermediate />
-    </MyContext.Provider>
+    <>
+      <p> useContext Practice</p>
+      <MyContext.Provider value="Hello , I am External">
+        <Intermediate />
+      </MyContext.Provider>
+    </>
   );
 };
 

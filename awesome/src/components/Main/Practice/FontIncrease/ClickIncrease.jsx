@@ -4,7 +4,6 @@ import s from "./ClickIncrease.module.css";
 import withCounter from "../../../hoc/withCounter.js";
 
 const ClickIncrease = (props) => {
-  console.log(props);
   const {
     age = "",
     name = "",
@@ -12,7 +11,7 @@ const ClickIncrease = (props) => {
     color,
     clearCounter,
     handleClick,
-  } = props;
+  } = props; //destruct props
   return (
     <div className={s.items}>
       <button className={s.btn} onClick={handleClick}>

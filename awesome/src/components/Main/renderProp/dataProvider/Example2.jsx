@@ -1,5 +1,4 @@
 import React from "react";
-import DataProvider from "./DataProvider";
 import DataProviderWithChildren from "./DataProviderWithChildren";
 import { Posts } from "./Posts/Posts";
 
