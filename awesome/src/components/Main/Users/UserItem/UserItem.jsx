@@ -21,7 +21,7 @@ const UserItem = ({ name, username, id, email, onDelete }) => {
       <div className={s.buttons}>
         {/* <button className={s.btn}>edit</button> */}
         <button onClick={handleDelete} className={s.btn}>
-          delete username
+          delete username!!!
         </button>
       </div>
     </div>
