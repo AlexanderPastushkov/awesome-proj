@@ -48,3 +48,16 @@ export default App;
 {
   /* </div> */
 }
+
+function twoHighest(arr) {
+  if (arr.length == 0) return [];
+  else if (arr.length > 1) {
+    const unique = [...new Set(arr)];
+    return unique
+      .sort((a, b) => a - b)
+      .reverse()
+      .slice(0, 2);
+  }
+}
+
+console.log(twoHighest([100, 500, 3, 49, 500, 69, 7]));
