@@ -1,10 +1,9 @@
-import randomColor from "randomcolor";
 import React, { useState } from "react";
 
 const UpdatedComponent = (OriginalComponent, increaseCount, name) => {
   const NewComponent = (props) => {
     const [counter, setCounter] = useState(10);
-    const [color, setColor] = useState(randomColor());
+    const [color, setColor] = useState("red");
     return (
       <OriginalComponent
         {...props} //pass down all incoming props to the HOC's children
@@ -14,7 +13,6 @@ const UpdatedComponent = (OriginalComponent, increaseCount, name) => {
         clearCounter={() => setCounter(10)}
         handleClick={() => {
           setCounter(counter + increaseCount);
-          setColor(randomColor());
         }}
       />
     );
