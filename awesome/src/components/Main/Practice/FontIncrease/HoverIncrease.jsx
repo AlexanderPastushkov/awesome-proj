@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import s from "./ClickIncrease.module.css";
-import randomColor from "randomcolor";
+
 import withCounter from "../../../hoc/withCounter.js";
 const HoverIncrease = (props) => {
   return (
