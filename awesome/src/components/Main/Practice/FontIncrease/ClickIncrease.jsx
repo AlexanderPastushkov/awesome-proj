@@ -1,4 +1,3 @@
-import randomColor from "randomcolor";
 import React, { useState } from "react";
 import s from "./ClickIncrease.module.css";
 import withCounter from "../../../hoc/withCounter.js";
